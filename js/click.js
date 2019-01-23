@@ -16,14 +16,6 @@ $(document).ready(function() {
         if (!$(this).hasClass("active")) {
             $('.nav-list-item').removeClass("active");
             $(this).addClass("active");
-            var index = $(this).attr("data-index");
-            var color = $(this).attr("data-color");
-            $('.nav-list-indicator').css("marginLeft", (25 * index) + "%");
-            $('.nav-list-indicator').css("background", color);
         }
-        setTimeout(function() {
-            $('.nav').removeClass("active");
-            toggleNavbar();
-        }, 400);
     });
 });

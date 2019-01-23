@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+    .mainLogo img {
+        width: 80%;
+    }
+    .section {
+        padding: 80px 5%;
+        margin: 200px 0;
+    }
+    .layout-10,
+    .layout-20,
+    .layout-30,
+    .layout-40,
+    .layout-50,
+    .layout-60,
+    .layout-70,
+    .layout-80,
+    .layout-90 {
+        width: 100%;
+    }
+    .layout-container {
+        flex-wrap: wrap;
+    }
+    .layout {
+        margin: 0 0 40px 0;
+    }
+    .nav-icon {
+        right: 10px
+    }
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list-item::after {
+        top: 50%;
+        left: -200px;
+        transform: translateY(-50%);
+        transition: left ease 0.4s;
+    }
+    .nav-list-item.active::after {
+        left: 0px;
+        top: 50%;
+    }
+}

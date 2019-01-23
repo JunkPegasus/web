@@ -12,34 +12,83 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Schriftarten Einbindung -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600|Source+Sans+Pro:200,300" rel="stylesheet">
 
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/media.css" />
     <script src="js/jquery.js"></script>
     <script src="js/initialize.js"></script>
     <script src="js/animation.js" async></script>
     <script src="js/click.js"></script>
 </head>
 
-<body>
+<body onload="clearLoadingCover()">
+    <div class="LoadingCover">
+        <div class="LoadingIcon"></div>
+        <h1>Page Loading</h1>
+    </div>
+    <div class="nav-icon" onclick="toggleNavbar()">
+        <div class="nav-icon-bar bar1"></div>
+        <div class="nav-icon-bar bar2"></div>
+        <div class="nav-icon-bar bar3"></div>
+    </div>
     <nav class="nav">
         <ul class="nav-list">
-            <li class="nav-list-item active" data-index=0 data-color="var(--color-main)">home</li>
-            <li class="nav-list-item" data-index=1 data-color="var(--color-second)">kontakt</li>
-            <li class="nav-list-item" data-index=2 data-color="var(--color-third)">info</li>
-            <li class="nav-list-item" data-index=3 data-color="var(--color-fourth)">impressum</li>
-            <li class="nav-list-indicator"></li>
+            <li class="nav-list-item active">home</li>
+            <li class="nav-list-item">info</li>
+            <li class="nav-list-item">referenzen</li>
+            <li class="nav-list-item">kontakt</li>
+            <li class="nav-list-item">impressum</li>
         </ul>
     </nav>
+    <div class="mainLogo">
+        <img src="img/SVG/LogoWhite.svg">
+    </div>
     <div class="container">
-        <div class="nav-icon" onclick="toggleNavbar()">
-            <div class="nav-icon-bar bar1"></div>
-            <div class="nav-icon-bar bar2"></div>
-            <div class="nav-icon-bar bar3"></div>
+        <div class="section" id="nav-info">
+            <img class="section-top" src="img/SVG/section_top.svg">
+            <div class="section-content">
+                <h1>information</h1>
+                <div class="layout-container">
+                    <div class="layout layout-70">
+                        <p>Willkommen auf der Webseite von tsn Webdesign.<br> Mein Name ist Thomas Schiele und ich gestalte moderne, einfache und preisgünstige Internetauftritte für Jedermann zum Festpreis.
+                            <br>Seit 2017 bin ich Fachinformatiker für Anwendungsentwicklung bei der Firma <a href="https://www.active-logistics.com/" target="_blank">active logistics</a> und beschäftige mich seit mehreren Jahren mit dem World Wide Web.<br>Nach
+                            vielen Stunden der Übung und der Theroie hab ich schließlich meine erste Webseite für die <a href="https://elj-nn.de" target="_blank">Evangelische Landjugend Nennslingen</a> erstellt. <br> Jede meiner Webseiten folgt natürlich
+                            dem modernen "responsive Design", das gar nicht so kompliziert ist wie es klingt. Es bedeutet lediglich, dass die Webseite ohne Mehraufwand auf allen Endgeräten wie Laptop, PC, Tablet, Smartphone oder Fernseher optimal angezeigt
+                            werden kann und die Inhalte übersichtlich und strukturiert dargestellt werden.
+                            <br>Kontaktieren Sie mich doch einfach und ich werde Ihnen mit Sicherheit weiterhelfen können.
+                        </p>
+                    </div>
+                    <div class="layout layout-30">
+                        <img src="img/SVG/ResponsiveBlack.svg" class="text-img">
+                        <i class="img-subtitle">Schema: responsive Design</i>
+                    </div>
+                </div>
+            </div>
+            <img class="section-bottom" src="img/SVG/section2_bottom.svg">
         </div>
-        <h1>tsn Webdesign</h1>
-        <h2>Headline 1</h2>
+        <div class="section" id="nav-ref">
+            <img class="section-top" src="img/SVG/section2_top.svg">
+            <div class="section-content">
+                <h1>referenzen</h1>
+            </div>
+            <img class="section-bottom" src="img/SVG/section_bottom.svg">
+        </div>
+        <div class="section" id="nav-con">
+            <img class="section-top" src="img/SVG/section_top.svg">
+            <div class="section-content">
+                <h1>kontakt</h1>
+            </div>
+            <img class="section-bottom" src="img/SVG/section2_bottom.svg">
+        </div>
+        <div class="section" id="nav-imp">
+            <img class="section-top" src="img/SVG/section2_top.svg">
+            <div class="section-content">
+                <h1>impressum</h1>
+            </div>
+            <img class="section-bottom" src="img/SVG/section_bottom.svg">
+        </div>
     </div>
 </body>
 
