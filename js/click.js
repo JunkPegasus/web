@@ -18,4 +18,5 @@ $(document).ready(function() {
             $(this).addClass("active");
         }
     });
+    $('.sendMessage').on('click', function() {});
 });

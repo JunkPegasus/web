@@ -23,12 +23,15 @@
     <script src="js/click.js"></script>
 </head>
 
-<body onload="clearLoadingCover()" onscroll="onBodyScroll(this)">
-    <div class="bg"></div>
-    <div class="LoadingCover">
-        <div class="LoadingIcon"></div>
-        <h1>Page Loading</h1>
+<body onload="showStart()">
+    <div class="pageLoadingContainer">
+        <div class="pageLoadingWrapper">
+            <div class="loadingIcon">
+                <img src="img/SVG/w-icon.svg">
+            </div>
+        </div>
     </div>
+    <div class="bg"></div>
     <div class="nav-icon" onclick="toggleNavbar()">
         <div class="nav-icon-bar bar1"></div>
         <div class="nav-icon-bar bar2"></div>
@@ -37,60 +40,52 @@
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-list-item active">home</li>
-            <li class="nav-list-item">info</li>
-            <li class="nav-list-item">referenzen</li>
             <li class="nav-list-item">kontakt</li>
+            <li class="nav-list-item">referenzen</li>
             <li class="nav-list-item">impressum</li>
         </ul>
     </nav>
-    <div class="mainLogo">
-        <img src="img/SVG/LogoWhite.svg">
+    <div class="logoContainer">
+        <div class="logoWrapper">
+            <img src="img/SVG/LogoWhite.svg">
+        </div>
     </div>
     <div class="container">
-        <div class="section" id="nav-info">
-            <img class="section-top" src="img/SVG/section_top.svg">
-            <div class="section-content">
-                <h1>information</h1>
-                <div class="layout-container">
-                    <div class="layout layout-70">
-                        <p>Willkommen auf der Webseite von tsn Webdesign.<br> Mein Name ist Thomas Schiele und ich gestalte moderne, einfache und preisgünstige Internetauftritte für Jedermann zum Festpreis.
-                            <br>Seit 2017 bin ich Fachinformatiker für Anwendungsentwicklung bei der Firma <a href="https://www.active-logistics.com/" target="_blank">active logistics</a> und beschäftige mich seit mehreren Jahren mit dem World Wide Web.<br>Nach
-                            vielen Stunden der Übung und der Theroie hab ich schließlich meine erste Webseite für die <a href="https://elj-nn.de" target="_blank">Evangelische Landjugend Nennslingen</a> erstellt. <br> Jede meiner Webseiten folgt natürlich
-                            dem modernen "responsive Design", das gar nicht so kompliziert ist wie es klingt. Es bedeutet lediglich, dass die Webseite ohne Mehraufwand auf allen Endgeräten wie Laptop, PC, Tablet, Smartphone oder Fernseher optimal angezeigt
-                            werden kann und die Inhalte übersichtlich und strukturiert dargestellt werden.
-                            <br>Kontaktieren Sie mich doch einfach und ich werde Ihnen mit Sicherheit weiterhelfen können.
-                        </p>
-                    </div>
-                    <div class="layout layout-30">
-                        <img src="img/SVG/ResponsiveBlack.svg" class="text-img">
-                        <i class="img-subtitle">Schema: responsive Design</i>
-                    </div>
-                </div>
-            </div>
-            <img class="section-bottom" src="img/SVG/section2_bottom.svg">
-        </div>
-        <div class="section" id="nav-ref">
-            <img class="section-top" src="img/SVG/section2_top.svg">
-            <div class="section-content">
-                <h1>referenzen</h1>
-            </div>
-            <img class="section-bottom" src="img/SVG/section_bottom.svg">
-        </div>
-        <div class="section" id="nav-con">
-            <img class="section-top" src="img/SVG/section_top.svg">
-            <div class="section-content">
-                <h1>kontakt</h1>
-            </div>
-            <img class="section-bottom" src="img/SVG/section2_bottom.svg">
-        </div>
-        <div class="section" id="nav-imp">
-            <img class="section-top" src="img/SVG/section2_top.svg">
-            <div class="section-content">
-                <h1>impressum</h1>
-            </div>
-            <img class="section-bottom" src="img/SVG/section_bottom.svg">
+        <div class="contactContainer">
+            <h1 class="heading">Kontakt</h1>
+            <form>
+                <input type="text" name="name" required placeholder="Name">
+                <input type="text" name="subject" required placeholder="Betreff">
+                <input type="email" name="email" required placeholder="E-Mail Adresse">
+                <textarea required name="message" placeholder="Nachricht"></textarea>
+                <div class="sendMessage">Abschicken</div>
+            </form>
+
         </div>
     </div>
+    <!-- <div class="slider">
+    <ul class="slider-list">
+        <li class="slider-item active" data-id="0">
+            <div class="slider-content">
+                <img src="img/SVG/LogoWhite.svg" class="mainLogo">
+            </div>
+        </li>
+        <li class="slider-item" data-id="1">
+            <div class="slider-content">
+                <p>Willkommen auf der Webseite von tsn Webdesign.<br> Mein Name ist Thomas Schiele und ich gestalte moderne, einfache und preisgünstige Internetauftritte für Jedermann zum Festpreis.
+                    <br>Seit 2017 bin ich Fachinformatiker für Anwendungsentwicklung bei der Firma <a href="https://www.active-logistics.com/" target="_blank">active logistics</a> und beschäftige mich seit mehreren Jahren mit dem World Wide Web.<br>Nach
+                    vielen Stunden der Übung und der Theroie hab ich schließlich meine erste Webseite für die <a href="https://elj-nn.de" target="_blank">Evangelische Landjugend Nennslingen</a> erstellt. <br> Jede meiner Webseiten folgt natürlich dem
+                    modernen "responsive Design", das gar nicht so kompliziert ist wie es klingt. Es bedeutet lediglich, dass die Webseite ohne Mehraufwand auf allen Endgeräten wie Laptop, PC, Tablet, Smartphone oder Fernseher optimal angezeigt werden
+                    kann und die Inhalte übersichtlich und strukturiert dargestellt werden.
+                    <br>Kontaktieren Sie mich doch einfach und ich werde Ihnen mit Sicherheit weiterhelfen können.
+                </p>
+                <img src="img/SVG/ResponsiveBlack.svg" class="content-img">
+                <span class="img-sub">responsive Webdesign</span>
+            </div>
+        </li>
+    </ul>
+    </div>
+    -->
 </body>
 
 </html>

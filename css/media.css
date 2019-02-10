@@ -1,27 +1,6 @@
 @media (max-width: 768px) {
-    .mainLogo img {
+    .logoWrapper {
         width: 80%;
-    }
-    .section {
-        padding: 80px 5%;
-        margin: 200px 0;
-    }
-    .layout-10,
-    .layout-20,
-    .layout-30,
-    .layout-40,
-    .layout-50,
-    .layout-60,
-    .layout-70,
-    .layout-80,
-    .layout-90 {
-        width: 100%;
-    }
-    .layout-container {
-        flex-wrap: wrap;
-    }
-    .layout {
-        margin: 0 0 40px 0;
     }
     .nav-icon {
         right: 10px
@@ -38,5 +17,18 @@
     .nav-list-item.active::after {
         left: 0px;
         top: 50%;
+    }
+    .contactContainer {
+        padding: 40px 20px;
+    }
+    .contactContainer input:not([type=submit]),
+    .contactContainer textarea {
+        width: 100%;
+    }
+    .sendMessage {
+        width: 80%;
+    }
+    .container::before {
+        transform: translateY(.75px);
     }
 }

@@ -1,17 +1,24 @@
-function onBodyScroll(e) {
-    $('.mainLogo img').css("transform","translateY("+e.scrollY/5+"px) scale(1)");
+$().ready(function() {
+    $(document).on("scroll", function() {
+        var scroll = $('html')[0].scrollTop;
+        var logoScroll = scroll / 2.7;
+        $('.logoContainer img').css("transform", "translateY(" + logoScroll + "px)");
 
-}
+        var docHeight = $(document).height();
+        var winHeight = window.innerHeight;
+        var maxScroll = docHeight - winHeight;
 
-function clearLoadingCover() {
-    $('.LoadingCover').addClass("hidden");
+        var ratio = scroll / maxScroll;
+        var translate = ratio * 20 * -1;
+        $('.bg').css("top", translate + "%");
+    });
+});
+
+function showStart() {
     setTimeout(function() {
-        $('.LoadingCover').css("display", "none");
-        animateTitleLogo();
+        $('.pageLoadingContainer').addClass("hide");
+        setTimeout(function() {
+            $('.pageLoadingContainer').css("display", "none");
+        }, 1500)
     }, 1000);
 }
-
-function animateTitleLogo() {
-    $('.mainLogo img').addClass("show");
-}
-
