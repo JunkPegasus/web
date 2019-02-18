@@ -28,7 +28,4 @@
     .sendMessage {
         width: 80%;
     }
-    .container::before {
-        transform: translateY(.75px);
-    }
 }

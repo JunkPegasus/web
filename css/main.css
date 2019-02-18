@@ -269,7 +269,7 @@
     
     .container::before {
         content: '';
-        bottom: 100%;
+        bottom: 99.9%;
         position: absolute;
         background: url(../img/SVG/section-top.svg) no-repeat;
         height: 200px;
